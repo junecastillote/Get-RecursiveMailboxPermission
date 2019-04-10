@@ -6,15 +6,15 @@
 
 .AUTHOR June Castillote
 
-.COMPANYNAME june.castillote@gmail.com
+.COMPANYNAME www.lazyexchangeadmin.com
 
 .COPYRIGHT june.castillote@gmail.com
 
-.TAGS office365,exchangeonline
+.TAGS office365,exchangeonline,report,reporting,mailboxpermission,permission
 
-.LICENSEURI
+.LICENSEURI https://github.com/junecastillote/Get-RecursiveMailboxPermission/raw/master/LICENSE
 
-.PROJECTURI
+.PROJECTURI https://github.com/junecastillote/Get-RecursiveMailboxPermission
 
 .ICONURI
 
@@ -86,8 +86,6 @@ param(
 	[parameter(mandatory=$true)]
 	[string]$reportFile
 )
-
-
 
 Function Stop-TxnLogging
 {
