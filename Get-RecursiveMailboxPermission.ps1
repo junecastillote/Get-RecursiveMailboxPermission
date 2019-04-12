@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 1.1
+.VERSION 1.2
 
 .GUID 06971314-b4e7-47c5-b29c-fd55f1b5ca87
 
@@ -26,12 +26,7 @@
 
 .RELEASENOTES
 
-
 .PRIVATEDATA
-
-#>
-
-<#
 
 #>
 
@@ -52,34 +47,29 @@ The Path of the CSV file where the results will be exported to.
 The path of the transcript log file. If not specified, transcript logging will not run.
 
 .EXAMPLE
-$mailboxes = "User1","User2"; Get-RecursiveMailboxPermission -mailboxList $mailboxes -reportFile .\permissions.csv
+$mailboxes = "User1","User2"; Get-RecursiveMailboxPermission.ps1 -mailboxList $mailboxes -reportFile .\permissions.csv
 
 .EXAMPLE
-$mailboxes = (Get-Mailbox -ResultSize Unlimited).UserPrincipalName; Get-RecursiveMailboxPermission -mailboxList$mailboxes -reportFile .\permissions.csv
+$mailboxes = (Get-Mailbox -ResultSize Unlimited).UserPrincipalName; Get-RecursiveMailboxPermission.ps1 -mailboxList$mailboxes -reportFile .\permissions.csv
 
 .EXAMPLE
-$mailboxes = (Get-Mailbox User1).UserPrincipalName; Get-RecursiveMailboxPermission -mailboxList$mailboxes -reportFile .\permissions.csv
+$mailboxes = (Get-Mailbox User1).UserPrincipalName; Get-RecursiveMailboxPermission.ps1 -mailboxList$mailboxes -reportFile .\permissions.csv
 
 .EXAMPLE
-Get-RecursiveMailboxPermission -mailboxList (Get-Mailbox -ResultSize 100).UserPrincipalName -reportFile .\permissions.csv
+Get-RecursiveMailboxPermission.ps1 -mailboxList (Get-Mailbox -ResultSize 100).UserPrincipalName -reportFile .\permissions.csv
 
 .EXAMPLE
-Get-RecursiveMailboxPermission -mailboxList (Get-Mailbox User1).UserPrincipalName -reportFile .\permissions.csv
+Get-RecursiveMailboxPermission.ps1 -mailboxList (Get-Mailbox User1).UserPrincipalName -reportFile .\permissions.csv
 
 .EXAMPLE
-$mailboxes = Get-Content .\mailboxList.txt; Get-RecursiveMailboxPermission -mailboxList $mailboxes -reportFile .\permissions.csv
+$mailboxes = Get-Content .\mailboxList.txt; Get-RecursiveMailboxPermission.ps1 -mailboxList $mailboxes -reportFile .\permissions.csv
 
 .EXAMPLE
-Get-RecursiveMailboxPermission -mailboxList (Get-Content .\mailboxList.txt) -reportFile .\permissions.csv
+Get-RecursiveMailboxPermission.ps1 -mailboxList (Get-Content .\mailboxList.txt) -reportFile .\permissions.csv
 
 .NOTES
 june.castillote@gmail.com
 #>
-
-
-
-
-
 
 [CmdletBinding()]
 param(
