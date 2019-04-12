@@ -1,8 +1,8 @@
 <#PSScriptInfo
 
-.VERSION 1.0
+.VERSION 1.1
 
-.GUID ac87dc9d-4058-429d-9e17-a0a3a8f95417
+.GUID 06971314-b4e7-47c5-b29c-fd55f1b5ca87
 
 .AUTHOR June Castillote
 
@@ -32,16 +32,15 @@
 #>
 
 <#
-.DESCRIPTION
-This script can be used to report the list of permissions to a mailbox or a list of mailboxes
+
 #>
 
 <#
-.SYNOPSIS
-Script to export Exchange Mailbox Permissions
-
 .DESCRIPTION
 This script can be used to report the list of permissions to a mailbox or a list of mailboxes
+
+.SYNOPSIS
+Script to export Exchange Mailbox Permissions
 
 .PARAMETER mailboxList
 The list of mailboxes to be reported. Can be provided using an array ("mailbox1","mailbox2"), or the (Get-Mailbox).UserPrincipal command, or from a text file (get-content mailboxes.txt)
@@ -76,6 +75,11 @@ Get-RecursiveMailboxPermission -mailboxList (Get-Content .\mailboxList.txt) -rep
 .NOTES
 june.castillote@gmail.com
 #>
+
+
+
+
+
 
 [CmdletBinding()]
 param(
